@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINAIR</title>
+    <link rel="stylesheet" href="//images.jinair.com/css/font.css?_=20230315135300">
+    <style>
+        /* https://www.jinair.com/booking/index  */
+        *{
+            font-family: 'notob';
+            /* font-family: 'NanumSquareNeo-Variable'; */
+            margin: 0;
+            padding: 0;
+        }
+        .info{
+          display: flex;
+          margin-left: 22vw;
+          margin-right: 22vw;
+          justify-content: space-around;
+        }
+        .nav-container{
+            display: flex;
+            list-style: none;
+            border-bottom: 1px solid rgba(232, 232, 232, 0.702);
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .nav-items{
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+        .ad{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .bellow{
+          max-width: 80%;
+          margin-top: 30px;
+        }
+        
+        button{
+          border:none;
+        }
+        a{
+          text-decoration: none;
+          color: black;
+        }
+
+
+
+
+        .dropdown{
+            position : relative;
+            display : inline-block;
+        }
+        .dropbtn{
+          font-weight: 400;
+          color : rgb(0, 0, 0);
+          background-color: #ffffff;
+          width: 15vw;
+          height: 65px;
+          cursor : pointer;
+        }
+        .dropdown-content{
+          display : none;
+          position : absolute;
+          z-index : 1; /*다른 요소들보다 앞에 배치*/
+          font-weight: 400;
+          background-color: #ffffff;
+          min-width : 200px;
+          border: 1px solid black;
+        }
+        .person-info .dropdown-content{
+          top: 55px;
+        }
+
+        .dropdown-content a{
+          display : block;
+          text-decoration : none;
+          color : rgb(37, 37, 37);
+          font-size: 12px;
+          padding : 12px 20px;
+        }
+
+        .dropdown-content a:hover{
+          background-color : #ececec
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .person-info button{
+          font-size: 20px;
+          width: fit-content;
+          text-align: left;
+          padding-left: 10px;
+          padding-right: 5px;
+          margin-bottom: 20px;
+        }
+        .depart-info .dropdown{
+          border: 1px solid rgba(220, 220, 220, 0.702);
+          box-shadow: 2px 2px 2px 2px rgb(233, 233, 233);
+          margin-left: 0.5vw;
+          margin-right: 0.5vw;
+        }
+
+
+      .next{
+        background-color: #bdd600;
+        cursor: pointer;
+        text-align: center;
+        width: 10vw;
+        height: 65px;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+      }
+      .bonus{
+        color: gray;
+        margin-left: 10px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        background: url(https://images.jinair.com/images/common/ico_jinair.png) no-repeat;
+      }
+      .reservation{
+        margin-left: 11vw;
+      }
+
+      @keyframes move{
+        0%{
+          top: -75px;
+        }
+        50%{
+          top: -85px;
+        }
+        100%{
+          top: -75px;
+        }
+      }
+      .ask{
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        margin-right: 90px;
+        margin-bottom: 50px;
+      }
+      .balloon{
+        position: relative;
+        top: -75px;
+        right: -117px;
+        animation: move 1s infinite;
+      }
+      .info a{
+        padding-left: 55px;
+        padding-bottom: 20px;
+        padding-top: 6.3px;
+        margin-top: 30px;
+        font-size: 20px;
+      }
+      .reserve-check{
+        background: url(https://images.jinair.com/images/booking/ico_sprite_menu_50x50.png) no-repeat 0 -100px;
+      }
+      .ticket{
+        background: url(https://images.jinair.com/images/booking/ico_sprite_menu_50x50.png) no-repeat 0 -50px;
+      }
+      .flight-info{
+        background: url(https://images.jinair.com/images/booking/ico_sprite_menu_50x50.png) no-repeat 0 0;
+      }
+      .sub-nav{
+        margin-top: 5px;
+        margin-right: 10px;
+        font-size: 0.8em;
+        color: rgb(202, 202, 202);
+        float: right;
+      }
+      .login{
+        padding-right: 7px;
+        margin-right: 6px;
+        border-right: 1px solid rgb(201, 201, 201);
+      }
+      @media(max-width:1025px) and (min-width : 700px)
+      {
+        .nav-items{
+          font-size: 15px;
+        }
+        .next{
+          width: 70vw;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+        .dropbtn{
+          width: 16vw;
+          
+        }
+      }
+      @media(max-width:699px)
+      {
+        .ad1{
+          display: none;
+        }
+      }
+
+
+    </style>
+</head>
+<body>
+    <header>
+      <div class="sub-nav dropdown">
+        <a href="#" class="login">로그인</a>
+        <a href="#" class="dropbtn">한국(한국어) / KRW</a>
+        <div class="dropdown-content">
+          <a href="#">영어</a>
+          <a href="#">일본어</a>
+          <a href="#">중국어</a>
+        </div>
+
+      </div>
+        <ul class="nav-container">
+            <li><a href="#" class="nav-items"><img src="https://images.jinair.com/images/layout/logo_02.png" alt="jinair_logo"></a></li>
+            <li><a href="#" class="nav-items">예약</a></li>
+            <li><a href="#" class="nav-items">서비스</a></li>
+            <li><a href="#" class="nav-items">혜택</a></li>
+            <li><a href="#" class="nav-items">나비포인트</a></li>
+            <li><a href="#" class="nav-items">지니스토어</a></li>
+        </ul>
+    </header>
+    <a href="#"><img class="ad ad1" src="https://files.jinair.com/prd/2023/0310/e61e68efe0484ae1b41ec58f3b507e602" alt="광고img"></a>
+    <div class="reservation">
+      <div class="person-info">
+          <div class="dropdown">
+              <button class="dropbtn">
+                왕복
+              </button>
+              <div class="dropdown-content">
+                <a href="#">왕복</a>
+                <a href="#">편도</a>
+                <a href="#">다구간</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">
+                성인1
+              </button>
+              <div class="dropdown-content">
+                <a href="#">왕복</a>
+                <a href="#">편도</a>
+                <a href="#">다구간</a>
+              </div>
+          </div>
+          <a href="#" class="bonus">보너스 항공권 예매</a>
+      </div>
+      <div class="depart-info">
+          <div class="dropdown">
+              <button class="dropbtn">
+                출발지
+              </button>
+              <div class="dropdown-content">
+                <a href="#">한국</a>
+                <a href="#">동북아</a>
+                <a href="#">동남아</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">
+                도착지
+              </button>
+              <div class="dropdown-content">
+                <a href="#">한국</a>
+                <a href="#">동북아</a>
+                <a href="#">동남아</a>
+              </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              가는날
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              오는날
+            </button>
+          </div>
+          <button class="next">다음</button>
+      </div>
+    </div>
+    <div class="info">
+      <a href="#" class="reserve-check">예약 조회</a>
+      <a href="#" class="ticket">탑승권</a>
+      <a href="#" class="flight-info">운항 정보</a>
+    </div>
+    <a href="#"><img class="ad bellow" src="https://files.jinair.com/prd/2023/0302/c6ac95f986744c5982ca657c9b3a35f32" alt="advertisement"></a>
+
+    <div class="ask">
+      <span class="balloon">
+        <img src="https://images.jinair.com/images/btn/jaid_balloon.png" alt="balloon">
+      </span>
+      <a href="#"><img src="https://images.jinair.com/images/btn/jaid_logo.png" alt="jaid_logo"></a>
+    </div>
+</body>
+</html>
