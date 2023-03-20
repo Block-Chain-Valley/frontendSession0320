@@ -1,0 +1,15 @@
+/* nav_header.css */
+/* css for nav,header */
+
+html {background-color:rgb(245,245,247); margin: 0px;}
+
+.nav {text-align: center; position: relative;bottom: 6px;}
+.nav ul {list-style-type: none; height:10px}
+.nav li {display: inline-block; margin-left: 25px; margin-right: 25px; font-size: 12px;}
+.nav li img{height: 15px; position: relative; top:2px}
+
+
+.header {text-align: center;background-color: white; font-size: 15px;}
+.header #header_content {position: relative; left: 220px;
+    height:auto; width: 1060px; padding-top: 15px; padding-bottom: 15px;}
+

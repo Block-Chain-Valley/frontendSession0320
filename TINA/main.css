@@ -1,0 +1,23 @@
+/* main.css */
+/* css for main(copy, side-menu, main-content)*/
+
+.clearfix::after {
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.copy {font-weight: bold; font-size: 40px; position: relative; left: 220px; top:90px;}
+
+
+.side-menu {position: relative; left: 1027px;}
+.side-menu a {font-size: 13px; font-weight: bold;}
+.side-menu img{width: 40px;}
+
+
+.main-content {font-size: 15px; text-align: center; position: relative; left: 220px; top: 100px; font-weight: bold;}
+.main-content img{width: 140px; }
+
+
+#black_font {color:rgb(29,29,31)}
+#gray_font {color:rgb(110,110,115)}
