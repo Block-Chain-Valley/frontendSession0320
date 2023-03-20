@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(../images/kisa건물.jpg);
+  background-size: cover;
+}
+
+nav {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.228);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.228);
+}
+
+nav div {
+  display: inline-block;
+}
+
+.nav-logo {
+  width: 25%;
+}
+
+.nav-main {
+  width: 50%;
+  position: absolute;
+  top: 40%;
+}
+.nav-button {
+  width: 15%;
+  position: absolute;
+  right: 30px;
+  top: 40%;
+}
+
+.logo img {
+  position: absolute;
+  left: 10px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+}
+
+.main-sentence {
+  position: absolute;
+  top: 180px;
+  left: 100px;
+}
+.main-sentence p {
+  color: white;
+  font-weight: 900;
+  font-size: 46px;
+}
+
+.main-box1,
+.main-box2,
+.main-box3,
+.main-box4 {
+  display: flex;
+}
+
+.main-box1,
+.main-box4 {
+  width: 22vw;
+  height: 27vh;
+}
+
+.main-box2,
+.main-box3 {
+  width: 27vh;
+  height: 22vw;
+}
+
+.main-box1 {
+  position: absolute;
+  top: 56.5vh;
+  right: 50vw;
+}
+.main-box2 {
+  position: absolute;
+  bottom: 16.5vh;
+  left: 50vw;
+}
+.main-box3 {
+  position: absolute;
+  bottom: 00vh;
+  left: 63.1vw;
+}
+.main-box4 {
+  position: absolute;
+  bottom: 45vh;
+  left: 63.1vw;
+}
+.main-box1 p,
+.main-box2 p,
+.main-box3 p,
+.main-box4 p {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
